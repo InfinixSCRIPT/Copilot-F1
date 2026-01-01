@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Copilot-F1 — Penaltısız Yarış</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <h1>Copilot-F1 — Penaltısız Yarış</h1>
+    <div class="row">
+      <div id="hud">
+        <div id="speed">Hız: 0 km/h</div>
+        <div id="distance">Mesafe: 0 / 100000 m</div>
+        <div id="position">Sıra: 1 / 6</div>
+      </div>
+      <div id="instructions">
+        <b>Kontroller</b>
+        <ul>
+          <li>Sağ / Sol okları — Direksiyon</li>
+          <li>Yukarı — Gaz</li>
+          <li>Aşağı — Fren / Ters</li>
+          <li>Space — Hızlı geçiş (boost kısa süreli, soğuma süresi var)</li>
+          <li>P — Oyunu duraklat / devam ettir</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <canvas id="game" width="1100" height="650"></canvas>
+      <div id="sidebar">
+        <h3>Bilgiler</h3>
+        <p>Çarpmalar, araçları yok etmez. Çarpışma halinde araçlar itilir ve hız kaybeder. Yarış 100000 metrede biter.</p>
+        <div id="results" class="hidden"></div>
+      </div>
+    </div>
+    <div id="footer">Oyunu sonlandırmak için tarayıcı sekmesini kapatın.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
