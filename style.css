@@ -1,0 +1,29 @@
+/* Basit stil - merkezi, okunaklı */
+:root{
+  --bg: #111218;
+  --panel: #0f1720;
+  --accent: #1fb6ff;
+  --text: #d9e6f2;
+  --muted: #9fb0c8;
+}
+
+*{box-sizing: border-box; font-family: Inter, Roboto, Arial, sans-serif}
+html,body{height:100%; margin:0; background:linear-gradient(180deg,#081020,var(--bg)); color:var(--text)}
+#ui{max-width:1200px;margin:16px auto;padding:16px}
+h1{margin:0 0 8px 0; font-size:20px; color:var(--accent)}
+.row{display:flex; gap:12px; align-items:flex-start}
+#hud{background:var(--panel); padding:10px; border-radius:8px; min-width:260px}
+#instructions{background:var(--panel); padding:10px; border-radius:8px; color:var(--muted); font-size:14px}
+#game{background:linear-gradient(#4c7c2a,#2b5a18); border-radius:8px; display:block;}
+#sidebar{width:260px; background:var(--panel); padding:10px; border-radius:8px; color:var(--muted)}
+#footer{margin-top:10px; color:var(--muted); font-size:13px}
+#speed,#distance,#position{margin-bottom:6px}
+.hidden{display:none}
+#results{margin-top:10px; color:var(--text)}
+/* Responsive */
+@media (max-width:1000px){
+  .row{flex-direction:column}
+  #sidebar{width:100%}
+  #hud{width:100%}
+  #game{width:100%; height:500px}
+}
